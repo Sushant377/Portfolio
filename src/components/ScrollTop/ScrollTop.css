@@ -1,0 +1,28 @@
+.scroll-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 44px;
+  height: 44px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  box-shadow: 0 4px 20px rgba(100, 255, 218, 0.15);
+  transition: box-shadow 0.25s ease;
+}
+
+.scroll-top:hover {
+  box-shadow: 0 6px 25px rgba(100, 255, 218, 0.3);
+}
+
+@media (max-width: 768px) {
+  .scroll-top {
+    bottom: 20px;
+    right: 20px;
+  }
+}

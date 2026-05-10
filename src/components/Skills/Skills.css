@@ -1,0 +1,137 @@
+#skills {
+  padding: 100px 0;
+  background: var(--bg-secondary);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* Left: bars */
+.skills-intro {
+  color: var(--text-secondary);
+  font-size: 0.97rem;
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+
+.bars-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skill-item {}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.skill-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.skill-icon { font-size: 1rem; }
+
+.skill-pct {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent);
+}
+
+.skill-track {
+  height: 6px;
+  background: var(--bg-tertiary);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.skill-fill {
+  height: 100%;
+  background: linear-gradient(to right, var(--accent-dark), var(--accent));
+  border-radius: 3px;
+  box-shadow: 0 0 8px rgba(100, 255, 218, 0.4);
+}
+
+/* Right: tools */
+.tools-title {
+  font-size: 1rem;
+  color: var(--white);
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.tools-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.tool-tag {
+  padding: 8px 16px;
+  border: 1px solid var(--bg-tertiary);
+  border-radius: 20px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  transition: var(--transition);
+  cursor: default;
+}
+
+/* Stats */
+.skills-fact {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background: var(--bg-primary);
+  border: 1px solid var(--bg-tertiary);
+  border-radius: var(--border-radius);
+  padding: 24px;
+  margin-top: 20px;
+}
+
+.fact-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.fact-num {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--accent);
+  font-family: var(--font-mono);
+}
+
+.fact-label {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.fact-divider {
+  width: 1px;
+  height: 50px;
+  background: var(--bg-tertiary);
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}

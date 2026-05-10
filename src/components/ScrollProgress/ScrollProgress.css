@@ -1,0 +1,18 @@
+.sp-track {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: transparent;
+  z-index: 9998;
+}
+
+.sp-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(to right, var(--accent-dark), var(--accent));
+  box-shadow: 0 0 8px var(--accent);
+  border-radius: 0 2px 2px 0;
+  transition: width 0.05s linear;
+}

@@ -1,0 +1,64 @@
+/* Hide on touch devices */
+@media (pointer: coarse) {
+  .cursor-dot, .cursor-ring { display: none; }
+}
+
+@media (pointer: fine) {
+  *, *::before, *::after { cursor: none !important; }
+}
+
+.cursor-dot {
+  position: fixed;
+  top: 0; left: 0;
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  transition: width 0.2s, height 0.2s, background 0.2s, opacity 0.2s;
+  will-change: transform;
+}
+
+.cursor-ring {
+  position: fixed;
+  top: 0; left: 0;
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid var(--accent);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99998;
+  opacity: 0.5;
+  transition: width 0.25s, height 0.25s, opacity 0.25s, border-color 0.25s;
+  will-change: transform;
+}
+
+/* Hover state */
+.cursor-dot.hovering {
+  width: 12px;
+  height: 12px;
+  background: var(--accent);
+  opacity: 0.8;
+}
+
+.cursor-ring.hovering {
+  width: 52px;
+  height: 52px;
+  opacity: 0.3;
+  border-color: var(--accent);
+}
+
+/* Click state */
+.cursor-dot.clicking {
+  width: 6px;
+  height: 6px;
+  background: var(--white);
+}
+
+.cursor-ring.clicking {
+  width: 28px;
+  height: 28px;
+  opacity: 0.8;
+  border-color: var(--white);
+}

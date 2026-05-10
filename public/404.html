@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — Page Not Found | Sushan Lamichhane</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #0a192f;
+      color: #ccd6f6;
+      font-family: 'Poppins', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    /* Grid background */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(100,255,218,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(100,255,218,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+
+    .container {
+      text-align: center;
+      padding: 40px 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .code {
+      font-family: 'Fira Code', monospace;
+      font-size: clamp(6rem, 20vw, 10rem);
+      font-weight: 500;
+      color: #64ffda;
+      line-height: 1;
+      text-shadow: 0 0 60px rgba(100,255,218,0.3);
+      animation: glow 3s ease-in-out infinite;
+    }
+
+    @keyframes glow {
+      0%, 100% { text-shadow: 0 0 40px rgba(100,255,218,0.2); }
+      50%       { text-shadow: 0 0 80px rgba(100,255,218,0.5), 0 0 120px rgba(100,255,218,0.2); }
+    }
+
+    .label {
+      font-family: 'Fira Code', monospace;
+      font-size: 0.9rem;
+      color: #8892b0;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin: 16px 0 32px;
+    }
+
+    h1 {
+      font-size: clamp(1.2rem, 3vw, 1.8rem);
+      font-weight: 700;
+      color: #e6f1ff;
+      margin-bottom: 14px;
+    }
+
+    p {
+      color: #8892b0;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      max-width: 420px;
+      margin: 0 auto 36px;
+    }
+
+    .btn {
+      display: inline-block;
+      border: 1px solid #64ffda;
+      color: #64ffda;
+      padding: 13px 32px;
+      border-radius: 8px;
+      font-family: 'Fira Code', monospace;
+      font-size: 0.88rem;
+      text-decoration: none;
+      transition: background 0.25s, box-shadow 0.25s;
+    }
+
+    .btn:hover {
+      background: rgba(100,255,218,0.1);
+      box-shadow: 0 0 20px rgba(100,255,218,0.2);
+    }
+
+    .logo {
+      position: absolute;
+      top: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Fira Code', monospace;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #64ffda;
+      letter-spacing: 2px;
+      text-decoration: none;
+    }
+
+    .logo span { color: #8892b0; }
+  </style>
+</head>
+<body>
+  <a href="/" class="logo"><span>&lt;</span>SL<span>/&gt;</span></a>
+  <div class="container">
+    <div class="code">404</div>
+    <p class="label">page not found</p>
+    <h1>Oops — wrong coordinates.</h1>
+    <p>The page you're looking for doesn't exist or has been moved. Let's get you back on track.</p>
+    <a href="/" class="btn">← Back to Home</a>
+  </div>
+</body>
+</html>

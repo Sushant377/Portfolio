@@ -1,0 +1,55 @@
+.intro-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: var(--bg-primary, #0a192f);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.intro-logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono, 'Fira Code', monospace);
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+.intro-bracket {
+  color: var(--text-secondary, #8892b0);
+  font-size: 0.85em;
+}
+
+.intro-letters {
+  color: var(--accent, #64ffda);
+  text-shadow: 0 0 40px var(--accent, #64ffda), 0 0 80px rgba(100,255,218,0.3);
+}
+
+.intro-bar-wrap {
+  width: min(260px, 60vw);
+  height: 2px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.intro-bar {
+  height: 100%;
+  background: linear-gradient(to right, var(--accent-dark, #0d9373), var(--accent, #64ffda));
+  transform-origin: left;
+  border-radius: 2px;
+  box-shadow: 0 0 10px var(--accent, #64ffda);
+}
+
+.intro-tagline {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.75rem;
+  color: var(--text-secondary, #8892b0);
+  letter-spacing: 4px;
+  text-transform: lowercase;
+}
